@@ -6,10 +6,11 @@ font-family: Verdana, Geneva, sans-serif;">
     <h3><%=@game.current_turn.name%> <%=@attack_method %> </h3>
     <h4><%=@game.current_turn.name%>: <%=@game.current_turn.fp %>fp</h4>
     <%if @game.current_turn.fp <= 0%>
-      <h2><%=@game.current_turn.name%>, your debauchery has gone too far! You are no longer a Z.<br />You are just a normal cunt now.<br />Jog on!</h2>
+      <h2><%=@game.current_turn.name%>, your debauchery has gone too far! You are no longer a Z.<br />You are just an unknown oxygen thief now.<br />Jog on!</h2>
     <%else%>
       <form action="/play", method="get">
-        <button type='submit' value="Retaliate">Retaliate</button>
+        <button style="height: 50px; width: 100px; background: transparent; font-size: 15px;
+	color: #fff; border-color: #fff; border-radius: 25px; border-style: solid; border-width: 2px" type='submit' value="Retaliate">Retaliate</button>
       </form>
     <%end%>
   </center>

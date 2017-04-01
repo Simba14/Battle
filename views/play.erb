@@ -14,12 +14,15 @@ font-family: Verdana, Geneva, sans-serif;">
           <option value="has had their private matters leaked">Sexy Tape</option>
           <option value="has had their nudes leaked in the Sun (Ouch!)">Tabloid Story</option>
         </select>
-        <button type="submit" value="Do It">Do It</button>
+        <button style="width: 60px; background: transparent;
+	color: #fff; border-color: #fff; border-radius: 25px; border-style: solid; border-width: 2px" type="submit" value="Do It">Do It</button>
       </form>
     </div>
     <div>
         <h3><%=@game.player_1.name%>: <%=@game.player_1.fp%> Fame Points</h3>
+        <meter id='health_bar_p1' min="0" max="100" low="20" high="70" optimum ="100" value="<%=@game.player_1.fp%>"></meter>
         <h3><%=@game.player_2.name%>: <%=@game.player_2.fp%> Fame Points</h3>
+        <meter id='health_bar_p2' min="0" max="100" low="20" high="70" optimum ="100" value="<%=@game.player_2.fp%>"></meter>
     </div>
   </center>
 </body>

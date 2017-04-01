@@ -2,6 +2,14 @@ class AttackLibrary
 
   attr_reader :attack_options, :find_fp_value, :move
 
+  def self.create(move)
+    @attack_library = AttackLibrary.new(move)
+  end
+
+  def self.instance
+    @attack_library
+  end
+
   def initialize(move)
     @move = move
     @attack_options = {
